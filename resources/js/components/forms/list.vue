@@ -14,7 +14,7 @@
                         <tr>
                             <th width="10%">No</th>
                             <th>Form Name</th>
-                            <th width="35%">Action</th>
+                            <th width="25%">Action</th>
                         </tr>
                     </thead>
                     <tbody v-for="(form, index) in forms" :key="index">
@@ -22,10 +22,28 @@
                             <td>{{index+1}}</td>
                             <td>{{form.form_name}}</td>
                             <td>
-                                <router-link :to="'/admin/forms/edit/'+form.id">Edit</router-link>
-                                <a href="#" @click.prevent="deleteForm(form.id)">Delete</a>
-                                <a href="#" @click.prevent="showModal(index, form.id, form.form_name)">Preview</a>
-                                <a :href="'/admin/generate_pdf/'+form.id">Download</a>
+                                <router-link :to="'/admin/forms/edit/'+form.id" class="btn btn-primary">
+                                <svg id="i-edit" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                    <path d="M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z" />
+                                </svg>
+                                </router-link>
+                                <a href="#" class="btn btn-danger" @click.prevent="deleteForm(form.id)">
+                                    <svg id="i-trash" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                        <path d="M28 6 L6 6 8 30 24 30 26 6 4 6 M16 12 L16 24 M21 12 L20 24 M11 12 L12 24 M12 6 L13 2 19 2 20 6" />
+                                    </svg>
+                                </a>
+                                <a href="#" class="btn btn-warning" @click.prevent="showModal(index, form.id, form.form_name)">
+                                    <svg id="i-zoom-reset" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                        <circle cx="14" cy="14" r="12" />
+                                        <path d="M23 23 L30 30" />
+                                        <path d="M9 12 L9 9 12 9 M16 9 L19 9 19 12 M9 16 L9 19 12 19 M19 16 L19 19 16 19" />
+                                    </svg>
+                                </a>
+                                <a :href="'/admin/generate_pdf/'+form.id" class="btn btn-success">
+                                    <svg id="i-download" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="16" height="16" fill="none" stroke="currentcolor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                                        <path d="M9 22 C0 23 1 12 9 13 6 2 23 2 22 10 32 7 32 23 23 22 M11 26 L16 30 21 26 M16 16 L16 30" />
+                                    </svg>
+                                </a>
                             </td>
                         </tr>
                     </tbody>

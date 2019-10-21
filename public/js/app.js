@@ -2655,6 +2655,24 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -44993,13 +45011,43 @@ var render = function() {
                       [
                         _c(
                           "router-link",
-                          { attrs: { to: "/admin/forms/edit/" + form.id } },
-                          [_vm._v("Edit")]
+                          {
+                            staticClass: "btn btn-primary",
+                            attrs: { to: "/admin/forms/edit/" + form.id }
+                          },
+                          [
+                            _c(
+                              "svg",
+                              {
+                                attrs: {
+                                  id: "i-edit",
+                                  xmlns: "http://www.w3.org/2000/svg",
+                                  viewBox: "0 0 32 32",
+                                  width: "16",
+                                  height: "16",
+                                  fill: "none",
+                                  stroke: "currentcolor",
+                                  "stroke-linecap": "round",
+                                  "stroke-linejoin": "round",
+                                  "stroke-width": "2"
+                                }
+                              },
+                              [
+                                _c("path", {
+                                  attrs: {
+                                    d:
+                                      "M30 7 L25 2 5 22 3 29 10 27 Z M21 6 L26 11 Z M5 22 L10 27 Z"
+                                  }
+                                })
+                              ]
+                            )
+                          ]
                         ),
                         _vm._v(" "),
                         _c(
                           "a",
                           {
+                            staticClass: "btn btn-danger",
                             attrs: { href: "#" },
                             on: {
                               click: function($event) {
@@ -45008,12 +45056,39 @@ var render = function() {
                               }
                             }
                           },
-                          [_vm._v("Delete")]
+                          [
+                            _c(
+                              "svg",
+                              {
+                                attrs: {
+                                  id: "i-trash",
+                                  xmlns: "http://www.w3.org/2000/svg",
+                                  viewBox: "0 0 32 32",
+                                  width: "16",
+                                  height: "16",
+                                  fill: "none",
+                                  stroke: "currentcolor",
+                                  "stroke-linecap": "round",
+                                  "stroke-linejoin": "round",
+                                  "stroke-width": "2"
+                                }
+                              },
+                              [
+                                _c("path", {
+                                  attrs: {
+                                    d:
+                                      "M28 6 L6 6 8 30 24 30 26 6 4 6 M16 12 L16 24 M21 12 L20 24 M11 12 L12 24 M12 6 L13 2 19 2 20 6"
+                                  }
+                                })
+                              ]
+                            )
+                          ]
                         ),
                         _vm._v(" "),
                         _c(
                           "a",
                           {
+                            staticClass: "btn btn-warning",
                             attrs: { href: "#" },
                             on: {
                               click: function($event) {
@@ -45026,13 +45101,74 @@ var render = function() {
                               }
                             }
                           },
-                          [_vm._v("Preview")]
+                          [
+                            _c(
+                              "svg",
+                              {
+                                attrs: {
+                                  id: "i-zoom-reset",
+                                  xmlns: "http://www.w3.org/2000/svg",
+                                  viewBox: "0 0 32 32",
+                                  width: "16",
+                                  height: "16",
+                                  fill: "none",
+                                  stroke: "currentcolor",
+                                  "stroke-linecap": "round",
+                                  "stroke-linejoin": "round",
+                                  "stroke-width": "2"
+                                }
+                              },
+                              [
+                                _c("circle", {
+                                  attrs: { cx: "14", cy: "14", r: "12" }
+                                }),
+                                _vm._v(" "),
+                                _c("path", { attrs: { d: "M23 23 L30 30" } }),
+                                _vm._v(" "),
+                                _c("path", {
+                                  attrs: {
+                                    d:
+                                      "M9 12 L9 9 12 9 M16 9 L19 9 19 12 M9 16 L9 19 12 19 M19 16 L19 19 16 19"
+                                  }
+                                })
+                              ]
+                            )
+                          ]
                         ),
                         _vm._v(" "),
                         _c(
                           "a",
-                          { attrs: { href: "/admin/generate_pdf/" + form.id } },
-                          [_vm._v("Download")]
+                          {
+                            staticClass: "btn btn-success",
+                            attrs: { href: "/admin/generate_pdf/" + form.id }
+                          },
+                          [
+                            _c(
+                              "svg",
+                              {
+                                attrs: {
+                                  id: "i-download",
+                                  xmlns: "http://www.w3.org/2000/svg",
+                                  viewBox: "0 0 32 32",
+                                  width: "16",
+                                  height: "16",
+                                  fill: "none",
+                                  stroke: "currentcolor",
+                                  "stroke-linecap": "round",
+                                  "stroke-linejoin": "round",
+                                  "stroke-width": "2"
+                                }
+                              },
+                              [
+                                _c("path", {
+                                  attrs: {
+                                    d:
+                                      "M9 22 C0 23 1 12 9 13 6 2 23 2 22 10 32 7 32 23 23 22 M11 26 L16 30 21 26 M16 16 L16 30"
+                                  }
+                                })
+                              ]
+                            )
+                          ]
                         )
                       ],
                       1
@@ -45143,7 +45279,7 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("th", [_vm._v("Form Name")]),
         _vm._v(" "),
-        _c("th", { attrs: { width: "35%" } }, [_vm._v("Action")])
+        _c("th", { attrs: { width: "25%" } }, [_vm._v("Action")])
       ])
     ])
   }
