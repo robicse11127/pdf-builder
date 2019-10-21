@@ -60,7 +60,7 @@ class FormBuilder extends Controller
                 $name = time().'.' . explode('/', explode(':', substr($image, 0, strpos($image, ';')))[1])[1];
                 // Changing the field_value for the image field
                 $field_value = $name;
-                \Image::make($image)->save(public_path('storage/images/').$name);
+                \Image::make($image)->save(public_path('storage/').$name);
             }
             $data [] = [
                 'label' => $field_label,
@@ -116,7 +116,7 @@ class FormBuilder extends Controller
                     $name = time().'.' . explode('/', explode(':', substr($image, 0, strpos($image, ';')))[1])[1];
                     // Changing the field_value for the image field
                     $field_value = $name;
-                    \Image::make($image)->save(public_path('storage/images/').$name);
+                    \Image::make($image)->save(public_path('storage/').$name);
                 }
             }
             $data []= [

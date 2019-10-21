@@ -44677,7 +44677,7 @@ var render = function() {
                                                   : _c("img", {
                                                       attrs: {
                                                         src:
-                                                          "/storage/images/" +
+                                                          "/storage/" +
                                                           element.value,
                                                         width: "150"
                                                       }
@@ -44904,9 +44904,7 @@ var render = function() {
                             item.type == "upload-field"
                               ? _c("div", { staticClass: "image" }, [
                                   _c("img", {
-                                    attrs: {
-                                      src: "/storage/images/" + item.value
-                                    }
+                                    attrs: { src: "/storage/" + item.value }
                                   })
                                 ])
                               : _vm._e(),

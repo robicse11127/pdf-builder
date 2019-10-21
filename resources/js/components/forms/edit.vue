@@ -160,7 +160,7 @@
                                                     <div class="col-md-10">
                                                         <div class="image-preview" v-if="formFields[index]['value']">
                                                             <img :src="image[index]" v-if="formFields[index]['changed'] == true" width="150"/>
-                                                            <img :src="'/storage/images/'+element.value" v-else width="150"/>
+                                                            <img :src="'/storage/'+element.value" v-else width="150"/>
                                                         </div>
                                                         <div class="upload-btn-wrapper">
                                                             <button class="btn btn-secondary btn-upload-file">Upload a file</button>
@@ -197,7 +197,7 @@
                                     </div>
                                     <div class="modal-body" v-for="(item, index) in this.previewForm.data" :key="index">
                                         <div class="image" v-if="item.type == 'upload-field'">
-                                            <img :src="'/storage/images/'+item.value" />
+                                            <img :src="'/storage/'+item.value" />
                                         </div>
                                         <div class="image" v-if="item.type == 'text-field'">
                                             <p class="text-field">{{item.value}}</p>
