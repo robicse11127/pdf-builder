@@ -49,7 +49,6 @@ class FormBuilder extends Controller
     {
         $form = new Form;
         $data = [];
-
         foreach( $request->fields as $field ) {
             $field_type     = $field['type'];
             $field_value    = $field['value'];
@@ -109,6 +108,7 @@ class FormBuilder extends Controller
         foreach( $request->fields as $field ) {
             $field_type     = $field['type'];
             $field_value    = $field['value'];
+            $field_label    = $field['label'];
 
             if( $field['type'] == 'upload-field' ) {
                 if( isset($field['changed']) ) {
@@ -120,7 +120,8 @@ class FormBuilder extends Controller
                 }
             }
             $data []= [
-                'type' => $field_type,
+                'label' => $field_label,
+                'type'  => $field_type,
                 'value' => $field_value
             ];
         }

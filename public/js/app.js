@@ -2493,6 +2493,7 @@ __webpack_require__.r(__webpack_exports__);
 
       axios.get('/admin/forms/' + this.$route.params.id + '/edit').then(function (res) {
         _this.formFields = JSON.parse(res.data[0].form_data);
+        console.log(_this.formFields);
         _this.formName = res.data[0].form_name;
       });
     },
@@ -2704,7 +2705,7 @@ __webpack_require__.r(__webpack_exports__);
     },
     beforeOpen: function beforeOpen(event) {
       this.previewForm.id = event.params.id;
-      this.previewForm.name = event.params.form_name;
+      this.previewForm.name = event.params.name;
       this.previewForm.data = event.params.data;
     },
     deleteForm: function deleteForm(id) {
@@ -45202,7 +45203,8 @@ var render = function() {
                   item.type == "upload-field"
                     ? _c("div", { staticClass: "image" }, [
                         _c("img", {
-                          attrs: { src: "/storage/images/" + item.value }
+                          staticClass: "img-fluid",
+                          attrs: { src: "/storage/" + item.value }
                         })
                       ])
                     : _vm._e(),

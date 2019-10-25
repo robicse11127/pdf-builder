@@ -264,6 +264,7 @@
                 axios.get('/admin/forms/'+this.$route.params.id+'/edit')
                 .then((res) => {
                     this.formFields = JSON.parse(res.data[0].form_data);
+                    console.log(this.formFields);
                     this.formName   = res.data[0].form_name;
                 })
             },

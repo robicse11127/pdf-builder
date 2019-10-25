@@ -55,7 +55,7 @@
                     </div>
                     <div class="modal-body" v-for="(item, index) in this.previewForm.data" :key="index">
                         <div class="image" v-if="item.type == 'upload-field'">
-                            <img :src="'/storage/images/'+item.value" />
+                            <img :src="'/storage/'+item.value" class="img-fluid"/>
                         </div>
                         <div class="image" v-if="item.type == 'text-field'">
                             <p class="text-field">{{item.value}}</p>
@@ -104,7 +104,7 @@
             },
             beforeOpen (event) {
                 this.previewForm.id = event.params.id;
-                this.previewForm.name = event.params.form_name;
+                this.previewForm.name = event.params.name;
                 this.previewForm.data = event.params.data;
             },
             deleteForm(id) {
