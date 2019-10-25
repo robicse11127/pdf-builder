@@ -213,7 +213,7 @@
                     {label: 'Label', type: 'label-field', value: ''},
                     {label: 'Text Field', type: 'text-field'},
                     {label: 'Textarea Field', type: 'textarea-field'},
-                    {label: 'Radio', type: 'radio-field'},
+                    // {label: 'Radio', type: 'radio-field'},
                     {label: 'Checkbox', type: 'checkbox-field'},
                     {label: 'Upload', type: 'upload-field'}, 
                 ],
@@ -243,6 +243,7 @@
                 let vm = this;
                 reader.onload = (e) => {
                     vm.formFields[index]['value'] = e.target.result;
+                    vm.formFields[index]['changed'] = true;
                     vm.$set(vm.image, index, e.target.result);
                 };
                 reader.readAsDataURL(file);

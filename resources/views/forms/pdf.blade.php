@@ -1,7 +1,7 @@
 <?php 
 foreach($form as $item) {
     if( $item->type == 'upload-field' ) {
-        echo '<img src="'.public_path('/storage').'/'.$item->value.'" />';
+        echo '<div><img src="'.public_path('/storage').'/'.$item->value.'" /></div>';
     }
     if( $item->type == 'text-field' || $item->type == 'textarea-field' ) {
         echo '<p>'.$item->value.'</p>';

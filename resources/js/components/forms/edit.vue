@@ -162,6 +162,9 @@
                                                             <img :src="image[index]" v-if="formFields[index]['changed'] == true" width="150"/>
                                                             <img :src="'/storage/'+element.value" v-else width="150"/>
                                                         </div>
+                                                        <div class="image-preview" v-else>
+                                                            <img :src="image[index]" width="150">
+                                                        </div>
                                                         <div class="upload-btn-wrapper">
                                                             <button class="btn btn-secondary btn-upload-file">Upload a file</button>
                                                             <input type="file" v-on:change="onImageChange" @click="getIndex(index)" :name="'upload_field_'+ index" class="form-control">
@@ -243,7 +246,7 @@
                     {label: 'Label', type: 'label-field', value: ''},
                     {label: 'Text Field', type: 'text-field'},
                     {label: 'Textarea Field', type: 'textarea-field'},
-                    {label: 'Radio', type: 'radio-field'},
+                    // {label: 'Radio', type: 'radio-field'},
                     {label: 'Checkbox', type: 'checkbox-field'},
                     {label: 'Upload', type: 'upload-field'}, 
                 ],

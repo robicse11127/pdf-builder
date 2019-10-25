@@ -2121,10 +2121,8 @@ __webpack_require__.r(__webpack_exports__);
       }, {
         label: 'Textarea Field',
         type: 'textarea-field'
-      }, {
-        label: 'Radio',
-        type: 'radio-field'
-      }, {
+      }, // {label: 'Radio', type: 'radio-field'},
+      {
         label: 'Checkbox',
         type: 'checkbox-field'
       }, {
@@ -2157,6 +2155,7 @@ __webpack_require__.r(__webpack_exports__);
 
       reader.onload = function (e) {
         vm.formFields[index]['value'] = e.target.result;
+        vm.formFields[index]['changed'] = true;
         vm.$set(vm.image, index, e.target.result);
       };
 
@@ -2439,6 +2438,9 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
   components: {
@@ -2465,10 +2467,8 @@ __webpack_require__.r(__webpack_exports__);
       }, {
         label: 'Textarea Field',
         type: 'textarea-field'
-      }, {
-        label: 'Radio',
-        type: 'radio-field'
-      }, {
+      }, // {label: 'Radio', type: 'radio-field'},
+      {
         label: 'Checkbox',
         type: 'checkbox-field'
       }, {
@@ -44693,7 +44693,18 @@ var render = function() {
                                                     })
                                               ]
                                             )
-                                          : _vm._e(),
+                                          : _c(
+                                              "div",
+                                              { staticClass: "image-preview" },
+                                              [
+                                                _c("img", {
+                                                  attrs: {
+                                                    src: _vm.image[index],
+                                                    width: "150"
+                                                  }
+                                                })
+                                              ]
+                                            ),
                                         _vm._v(" "),
                                         _c(
                                           "div",
