@@ -2674,6 +2674,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -45210,7 +45218,7 @@ var render = function() {
                     : _vm._e(),
                   _vm._v(" "),
                   item.type == "text-field"
-                    ? _c("div", { staticClass: "image" }, [
+                    ? _c("div", { staticClass: "text-field" }, [
                         _c("p", { staticClass: "text-field" }, [
                           _vm._v(_vm._s(item.value))
                         ])
@@ -45218,7 +45226,7 @@ var render = function() {
                     : _vm._e(),
                   _vm._v(" "),
                   item.type == "textarea-field"
-                    ? _c("div", { staticClass: "image" }, [
+                    ? _c("div", { staticClass: "textarea-field" }, [
                         _c("p", { staticClass: "textarea-field" }, [
                           _vm._v(_vm._s(item.value))
                         ])
@@ -45226,10 +45234,45 @@ var render = function() {
                     : _vm._e(),
                   _vm._v(" "),
                   item.type == "label-field"
-                    ? _c("div", { staticClass: "image" }, [
+                    ? _c("div", { staticClass: "label-field" }, [
                         _c("p", { staticClass: "label-field" }, [
                           _c("strong", [_vm._v(_vm._s(item.value))])
                         ])
+                      ])
+                    : _vm._e(),
+                  _vm._v(" "),
+                  item.type == "checkbox-field"
+                    ? _c("div", { staticClass: "checkbox-field" }, [
+                        item.value == true
+                          ? _c("p", { staticClass: "checkbox-field" }, [
+                              _c("strong", [
+                                _c("input", {
+                                  attrs: {
+                                    type: "checkbox",
+                                    checked: "checked"
+                                  }
+                                }),
+                                _vm._v(
+                                  " " +
+                                    _vm._s(item.label) +
+                                    "\n                        "
+                                )
+                              ])
+                            ])
+                          : _vm._e(),
+                        _vm._v(" "),
+                        item.value == false
+                          ? _c("p", { staticClass: "checkbox-field" }, [
+                              _c("strong", [
+                                _c("input", { attrs: { type: "checkbox" } }),
+                                _vm._v(
+                                  " " +
+                                    _vm._s(item.label) +
+                                    "\n                        "
+                                )
+                              ])
+                            ])
+                          : _vm._e()
                       ])
                     : _vm._e()
                 ])

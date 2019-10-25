@@ -57,14 +57,22 @@
                         <div class="image" v-if="item.type == 'upload-field'">
                             <img :src="'/storage/'+item.value" class="img-fluid"/>
                         </div>
-                        <div class="image" v-if="item.type == 'text-field'">
+                        <div class="text-field" v-if="item.type == 'text-field'">
                             <p class="text-field">{{item.value}}</p>
                         </div>
-                        <div class="image" v-if="item.type == 'textarea-field'">
+                        <div class="textarea-field" v-if="item.type == 'textarea-field'">
                             <p class="textarea-field">{{item.value}}</p>
                         </div>
-                        <div class="image" v-if="item.type == 'label-field'">
+                        <div class="label-field" v-if="item.type == 'label-field'">
                             <p class="label-field"><strong>{{item.value}}</strong></p>
+                        </div>
+                        <div class="checkbox-field" v-if="item.type == 'checkbox-field'">
+                            <p class="checkbox-field" v-if="item.value == true"><strong>
+                                <input type="checkbox" checked="checked"/> {{item.label}}
+                            </strong></p>
+                            <p class="checkbox-field" v-if="item.value == false"><strong>
+                                <input type="checkbox"/> {{item.label}}
+                            </strong></p>
                         </div>
                     </div>
                     <div class="modal-footer">
